@@ -5,18 +5,23 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour
 {
     public float gravity = 9.8f;
+    public float jumpForce;
 
     private float _fallVelocity = 0;
 
     private CharacterController _characterController;
 
-    // Start is called before the first frame update
     void Start()
     {
         _characterController = GetComponent<CharacterController>();
     }
 
-    // Update is called once per frame
+   void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Space) && _characterController.isGrounded) 
+            _fallVelocity = -jumpForce;
+    }
+
     void FixedUpdate()
     {
         _fallVelocity += gravity * Time.fixedDeltaTime;
