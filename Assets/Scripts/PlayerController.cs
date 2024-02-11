@@ -22,6 +22,7 @@ public class PlayerController : MonoBehaviour
 
    void Update()
     {
+        Debug.Log(_characterController.isGrounded);
         _moveVector = Vector3.zero;
 
         if (Input.GetKeyDown(KeyCode.Space) && _characterController.isGrounded)
@@ -47,23 +48,19 @@ public class PlayerController : MonoBehaviour
         if (Input.GetKey(KeyCode.A))
         {
             _moveVector -= transform.right;
-        }
-
-       
+        } 
     }
 
     void FixedUpdate()
     {
-        if (_characterController.isGrounded)
-        {
-            _fallVelocity += gravity * Time.fixedDeltaTime;
-        }
-
-        _fallVelocity += gravity * Time.fixedDeltaTime;
-
         _characterController.Move(_moveVector * speed * Time.fixedDeltaTime);
 
-        _characterController.Move(Vector3.down * _fallVelocity * Time.fixedDeltaTime);
+        _fallVelocity += gravity * Time.fixedDeltaTime;
+       _characterController.Move(Vector3.down * _fallVelocity * Time.fixedDeltaTime);
 
+        if (_characterController.isGrounded)
+        {
+            _fallVelocity = 0;
+        }
     }
 }
