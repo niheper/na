@@ -761,6 +761,31 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1429187112356659978, guid: ce1b0305f1b91ba4897ba2484c9d89f2,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1429187112356659978, guid: ce1b0305f1b91ba4897ba2484c9d89f2,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1429187112356659978, guid: ce1b0305f1b91ba4897ba2484c9d89f2,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1468111245271174757, guid: ce1b0305f1b91ba4897ba2484c9d89f2,
+        type: 3}
+      propertyPath: m_Height
+      value: 1.46
+      objectReference: {fileID: 0}
+    - target: {fileID: 1468111245271174757, guid: ce1b0305f1b91ba4897ba2484c9d89f2,
+        type: 3}
+      propertyPath: m_Center.y
+      value: 0.8
+      objectReference: {fileID: 0}
     - target: {fileID: 1468111245271174760, guid: ce1b0305f1b91ba4897ba2484c9d89f2,
         type: 3}
       propertyPath: m_Name
@@ -889,6 +914,7 @@ MonoBehaviour:
   - {fileID: 1657170560}
   - {fileID: 1472808223}
   Player: {fileID: 1474748105}
+  viewAngle: 90
 --- !u!195 &1253184398
 NavMeshAgent:
   m_ObjectHideFlags: 0
