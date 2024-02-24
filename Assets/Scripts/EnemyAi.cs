@@ -5,20 +5,39 @@ using UnityEngine.AI;
 
 public class EnemyAi : MonoBehaviour
 {
-    public Transform targetPoint;
-
+    public List<Transform> patrolPoints;
+    
     private NavMeshAgent _navMeshAgent;
 
-    // Start is called before the first frame update
     void Start()
+    {
+
+        InitComponentLinks();
+
+        PickNewPatrolPoint();
+       
+    }
+
+    void Update()
+    {
+        PatrolUpdate();
+    }
+
+    private void InitComponentLinks()
     {
         _navMeshAgent = GetComponent<NavMeshAgent>();
     }
 
-    // Update is called once per frame
-    void Update()
+    private void PatrolUpdate()
     {
-        _navMeshAgent.destination = targetPoint.position;
+        if (_navMeshAgent.remainingDistance == 0)
+        {
+            PickNewPatrolPoint();
+        }
+    }
 
+    private void PickNewPatrolPoint()
+    {
+        _navMeshAgent.destination = patrolPoints[Random.Range(0, patrolPoints.Count)].position;
     }
 }
