@@ -14,17 +14,20 @@ public class EnemyAi : MonoBehaviour
 
     void Start()
     {
-
         InitComponentLinks();
-
-        PickNewPatrolPoint();
-       
+        PickNewPatrolPoint();      
     }
 
     private void Update()
     {
-        var direction = Player.transform.position - transform.position;
+        NoticePlayerUpdate();
+        PatrolUpdate();
+    }
 
+    private void NoticePlayerUpdate()
+    {
+        var direction = Player.transform.position - transform.position;
+        _isPlayerNoticed = false;
         if (Vector3.Angle(transform.forward, direction) < viewAngle)
         {
             RaycastHit hit;
@@ -34,24 +37,8 @@ public class EnemyAi : MonoBehaviour
                 {
                     _isPlayerNoticed = true;
                 }
-                else
-                {
-                    _isPlayerNoticed = false;
-
-                }
-            }
-            else
-            {
-                _isPlayerNoticed = false;
-
             }
         }
-        else
-        {
-            _isPlayerNoticed = false;
-        }
-
-        PatrolUpdate();
     }
 
     private void InitComponentLinks()
