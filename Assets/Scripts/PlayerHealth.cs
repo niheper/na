@@ -7,6 +7,10 @@ public class PlayerHealth : MonoBehaviour
     public float value = 100;
     public RectTransform valueRectTransform;
 
+    public GameObject gameplayUI;
+    public GameObject gameOverScreen;
+
+
     private float _maxValue;
 
     private void Start()
@@ -20,10 +24,19 @@ public class PlayerHealth : MonoBehaviour
         value -= damage;
         if (value <= 0)
         {
-            Destroy(gameObject);
+            PlayerIsDead();
         }
 
         DrawHealthBar();
+    }
+
+    private void PlayerIsDead()
+    {
+        gameplayUI.SetActive(false);
+        gameOverScreen.SetActive(true);
+        GetComponent<PlayerController>().enabled = false;
+        GetComponent<FireballCaster>().enabled = false;
+        GetComponent<CameaRotation>().enabled = false;
     }
 
     private void DrawHealthBar()
