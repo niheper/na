@@ -5,6 +5,15 @@ using UnityEngine;
 public class PlayerHealth : MonoBehaviour
 {
     public float value = 100;
+    public RectTransform valueRectTransform;
+
+    private float _maxValue;
+
+    private void Start()
+    {
+        _maxValue = value;
+        DrawHealthBar();
+    }
 
     public void DealDamege(float damage)
     {
@@ -13,5 +22,12 @@ public class PlayerHealth : MonoBehaviour
         {
             Destroy(gameObject);
         }
+
+        DrawHealthBar();
+    }
+
+    private void DrawHealthBar()
+    {
+        valueRectTransform.anchorMax = new Vector2(value / _maxValue, 1);
     }
 }
