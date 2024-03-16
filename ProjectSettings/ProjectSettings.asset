@@ -705,10 +705,10 @@ PlayerSettings:
     m_VersionCode: 1
     m_VersionName: 
   apiCompatibilityLevel: 6
-  cloudProjectId: 9907f14f-44bf-4615-a4a7-cdd956f13264
+  cloudProjectId: 
   framebufferDepthMemorylessMode: 0
-  projectName: na
-  organizationId: niheper
+  projectName: 
+  organizationId: 
   cloudEnabled: 0
   enableNativePlatformBackendsForNewInputSystem: 0
   disableOldInputManagerSupport: 0
