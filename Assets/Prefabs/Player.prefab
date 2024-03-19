@@ -629,6 +629,7 @@ GameObject:
   - component: {fileID: -5185572712536808976}
   - component: {fileID: 7881984487738912164}
   - component: {fileID: 4508524302300367420}
+  - component: {fileID: 6101059150144793195}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -751,6 +752,20 @@ MonoBehaviour:
   grenadePrefab: {fileID: 619340607, guid: 5e287f359423fc5478a3ed90107f5603, type: 3}
   grenadeSourceTransform: {fileID: 4768671182350902707}
   force: 500
+--- !u!114 &6101059150144793195
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1468111245271174760}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e0f5dc2613a7150419e70e04e2ebde40, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  experienceValueRectTransform: {fileID: 8631963202981687357}
+  levelValueTMP: {fileID: 8208433674505206091}
 --- !u!1 &1667298917756784085
 GameObject:
   m_ObjectHideFlags: 0
