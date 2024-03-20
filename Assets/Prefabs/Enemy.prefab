@@ -74,7 +74,7 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
-  Player: {fileID: 0}
+  Player: {fileID: 1468111245271174756, guid: ce1b0305f1b91ba4897ba2484c9d89f2, type: 3}
   viewAngle: 100
   damage: 30
 --- !u!114 &3941048234195617876
