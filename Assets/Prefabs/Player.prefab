@@ -630,6 +630,8 @@ GameObject:
   - component: {fileID: 7881984487738912164}
   - component: {fileID: 4508524302300367420}
   - component: {fileID: 6101059150144793195}
+  - component: {fileID: 1026198472}
+  - component: {fileID: 1026198468}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -687,7 +689,7 @@ MonoBehaviour:
   gravity: 9.8
   jumpForce: 7
   speed: 7
-  animator: {fileID: 0}
+  animator: {fileID: 1026198468}
 --- !u!143 &1468111245271174757
 CharacterController:
   m_ObjectHideFlags: 0
@@ -721,6 +723,7 @@ MonoBehaviour:
   fireballPrefab: {fileID: 8296046345938856823, guid: 8b63253e0e1c3b24fabbafe0ae30f272,
     type: 3}
   fireballSourceTransform: {fileID: 4272818967536383911}
+  Sound: {fileID: 0}
   damage: 10
 --- !u!114 &7881984487738912164
 MonoBehaviour:
@@ -799,6 +802,33 @@ MonoBehaviour:
     experienceForTheNextLevel: 7000
   experienceValueRectTransform: {fileID: 8631963202981687357}
   levelValueTMP: {fileID: 8208433674505206091}
+--- !u!81 &1026198472
+AudioListener:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1468111245271174760}
+  m_Enabled: 1
+--- !u!95 &1026198468
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1468111245271174760}
+  m_Enabled: 1
+  m_Avatar: {fileID: 9000000, guid: 10038fdbf93c4dd43af9ce774d03a956, type: 3}
+  m_Controller: {fileID: 9100000, guid: 90aa3bc5e8191fd41a88194acfafd738, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1667298917756784085
 GameObject:
   m_ObjectHideFlags: 0

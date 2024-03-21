@@ -6,6 +6,7 @@ public class FireballCaster : MonoBehaviour
 {
     public Fireball fireballPrefab;
     public Transform fireballSourceTransform;
+    public AudioSource Sound;
 
     public float damage = 10;
     private void Update()
@@ -14,6 +15,7 @@ public class FireballCaster : MonoBehaviour
         {
             var fireball = Instantiate(fireballPrefab, fireballSourceTransform.position, fireballSourceTransform.rotation);
             fireball.damage = damage;
+            Sound.Play();
         }
     }
 }
