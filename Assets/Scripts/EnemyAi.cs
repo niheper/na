@@ -36,7 +36,8 @@ public class EnemyAi : MonoBehaviour
 
     private void NoticePlayerUpdate()
     {
-        var direction = Player.transform.position - transform.position;
+        var direction = Player.transform.position + Vector3.up * 1 - (transform.position + Vector3.up);
+        Debug.DrawRay(transform.position + Vector3.up, direction, Color.red);
         _isPlayerNoticed = false;
         if (Vector3.Angle(transform.forward, direction) < viewAngle)
         {
